@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "dominiproject": {
+      "hosting": {
+        "blogWeb": [
+          "dominiproject"
+        ]
+      }
+    }
+  }
+}
