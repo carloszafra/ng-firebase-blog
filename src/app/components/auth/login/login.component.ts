@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../../shared/services/auth.service';
 import {User} from '../../../shared/models/user.interface';
 import { FormGroup, FormControl, Validators} from '@angular/forms';
-import { Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit { 
   public loginForm;
   constructor(
     private _authService: AuthService,
@@ -36,5 +36,6 @@ export class LoginComponent implements OnInit {
       console.log(err);
     })
   }
+
 
 }

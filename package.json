@@ -11,6 +11,7 @@
   },
   "private": true,
   "dependencies": {
+    "2": "^3.0.0",
     "@angular/animations": "~9.1.9",
     "@angular/cdk": "^9.2.4",
     "@angular/common": "~9.1.9",
@@ -22,10 +23,13 @@
     "@angular/platform-browser": "~9.1.9",
     "@angular/platform-browser-dynamic": "~9.1.9",
     "@angular/router": "~9.1.9",
+    "firebase": "^7.13.1",
+    "ng2-file-upload": "^1.4.0",
     "rxjs": "~6.5.4",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^9.17.0",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2",
-    "firebase": "^7.13.1"
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.7",

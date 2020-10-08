@@ -6,27 +6,13 @@
     row-gap: 15px;
     justify-content: center;
 
-    a{
-        cursor: pointer;
-        color: white;
-        text-decoration: none;
-    }
-
     .post-card{
         background-color: #444;
         color: antiquewhite;
         border-radius: 5px;
         padding: 20px;
         font-size: 150%;
-
-        img{
-            height: 200px;
-        }
-
-        p.content{
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
+    
+        
     }
 }

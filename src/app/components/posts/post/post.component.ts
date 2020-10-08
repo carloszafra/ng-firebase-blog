@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {PostService} from '../post.service'
-import { postInterface } from 'src/app/shared/models/post.interface';
+import {PostService} from '../../posts/post.service';
+import {postInterface} from '../../../shared/models/post.interface';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -9,19 +9,18 @@ import { Observable } from 'rxjs';
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.scss']
 })
-export class PostComponent implements OnInit {
-  public post$ : Observable<postInterface>
-  
+export class PostComponent implements OnInit { 
      
+  
+  @Input() post: postInterface;
+
   constructor(
-    private _route : ActivatedRoute,
-    private _postService : PostService
+    private _postService: PostService
   ) 
   { }
 
   ngOnInit() {
-   const postId = this._route.snapshot.params.id; //recuperamos el postid de la url 
-   this.post$ = this._postService.getOnePost(postId);
+    
   }
 
 }

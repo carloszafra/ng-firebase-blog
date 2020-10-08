@@ -1,16 +1,20 @@
-<div class="container" *ngIf="post$ | async as post">
-    <mat-card class="post-card">
-
-        <img matCardImage class="align-center" [src]="post.postImage">
-        <mat-card-content>
-            <mat-card-title>
-                {{post.postTitle}}
-            </mat-card-title>
-            <p class="content">
-                {{post.postContent}}
-            </p>
-        </mat-card-content>
-
-    </mat-card>
-</div>
-
+<mat-card-header>
+    <mat-card-title>
+        <a [routerLink]="['/posts', post.id]"  >{{post.postTitle}}</a> 
+    </mat-card-title>
+    
+</mat-card-header>
+<img matCardImage [src]="post.postImage">
+<mat-card-content>
+    <p class="content">
+        {{post.postContent}} 
+    </p>
+</mat-card-content>
+<mat-divider></mat-divider>
+<mat-card-actions>
+    <mat-chip-list>
+        <mat-chip  *ngFor="let tag of post.postTags" [ngClass]="tag">
+            {{tag}}
+        </mat-chip>
+    </mat-chip-list>
+</mat-card-actions>

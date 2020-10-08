@@ -4,7 +4,7 @@
 
     <span class="fill-remaining-space"></span>
     
-    <a routerLink="/admin" routerLinkActive="active" *ngIf="_authService.userData | async">
+    <a routerLink="/admin" routerLinkActive="active" *ngIf="_authService.userData$ | async">
         <button mat-button>Admin</button>
     </a>
 
@@ -12,12 +12,12 @@
         <button mat-button>About</button>
     </a>
 
-    <a *ngIf="_authService.userData | async; else showLogin">
+    <a *ngIf="_authService.userData$ | async; else showLogin" (click)="onLogout()">
         <button mat-button>Logout</button>
     </a>
    
     <ng-template #showLogin>
-        <a routerLink="/login" routerLinkActive="active" (click)="onLogout()">
+        <a routerLink="/login" routerLinkActive="active" >
             <button mat-button>Login</button>
         </a>
     </ng-template>

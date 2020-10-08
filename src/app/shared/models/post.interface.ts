@@ -1,8 +1,8 @@
 export interface postInterface{
     postTitle: string;
     postContent: string;
-    postImage?: string;
-    id: string;
+    postImage?: any;
+    id?: string;
     postTags: string;
     fileRef?: string;
 }
